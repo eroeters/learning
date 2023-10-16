@@ -8,3 +8,7 @@ img {
     width: 300px;
     height: auto;
 }
+
+.directionsContainer {
+    width: 50%;
+}

@@ -5,18 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odin Recipes</title>
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="recipe-link.css">
 </head>
 <body>
 
     <nav class="navContainer">
         <ul class="navUl">
             <li><a class="indexLink" href="/index.html">Back to Main Index</a></li>
-            <li><a href="./recipes/lasagna.html">No-Noodle Zucchini Lasagna</a></li>
+            <!-- <li><a href="./recipes/lasagna.html">No-Noodle Zucchini Lasagna</a></li>
             <li><a href="./recipes/broccoli-rice.html">Broccoli, Chicken, and Rice Casserole</a></li>
-            <li><a href="./recipes/beef-stew.html">Instant Pot Beef Stew</a></li>
+            <li><a href="./recipes/beef-stew.html">Instant Pot Beef Stew</a></li> -->
         </ul>
+        <div class="recipeDropdown">
+            <button class="dropdownBtn">Recipes</button>
+            <div class="dropdown-content">
+              <a href="./recipes/lasagna.html">Lasagna</a>
+              <a href="./recipes/broccoli-rice.html">Chicken, Broccoli, Rice</a>
+              <a href="./recipes/beef-stew.html">Beef Stew</a>
+            </div>
+          </div> 
     </nav>
-    <h1>Odin Recipes</h1>
+    <h1 class="recipe-index-header">Odin Recipes</h1>
 
 </body>
 </html>
