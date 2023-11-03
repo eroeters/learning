@@ -11,11 +11,14 @@ body {
   align-items: center;
 }
 
+.content-info-container {
+  width: 100%;
+}
+
 .content-info-header {
   display: flex;
   justify-content: center;
   background-color: #1f2937;
-  width: 100%;
   margin: 0;
   padding: 0;
 }
@@ -31,10 +34,73 @@ body {
   color: #e5e7eb;
 }
 
+.left-header {
+  width: 25%;
+}
 .right-header {
   background-color: grey;
-  width: 300px;
+  width: 25%;
   height: 200px;
+}
+
+.mid-upper-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mid-content-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.card-content-container {
+  display: flex;
+  justify-content: center;
+}
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  margin-top: 40px;
+}
+
+.card {
+  border: 5px solid #3882f6;
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+}
+
+.card-text {
+  font-size: 18px;
+}
+
+.mid-lower-content {
+  display: flex;
+  justify-content: center;
+  background-color: #e5e7eb;
+}
+
+.quote {
+  color: #1f2937;
+  font-size: 36px;
+  font-style: italic;
+}
+
+.quote-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.quote-author {
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* header and footer */
@@ -62,6 +128,7 @@ body {
 .footer {
   display: flex;
   justify-content: center;
+  padding: 20px;
 }
 
 ul {
