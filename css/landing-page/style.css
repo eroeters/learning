@@ -1,7 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 body {
   display: flex;
   flex-direction: column;
   margin: 0;
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
 }
 
 .main-content {
@@ -9,18 +13,18 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex: 1;
 }
 
 .content-info-container {
   width: 100%;
+  padding: 50px 0;
+  background-color: #1f2937;
 }
 
 .content-info-header {
   display: flex;
   justify-content: center;
-  background-color: #1f2937;
-  margin: 0;
-  padding: 0;
 }
 
 .content-header-title {
@@ -41,6 +45,15 @@ body {
   background-color: grey;
   width: 25%;
   height: 200px;
+}
+
+.sign-up-btn-top {
+  background-color: #3882f6;
+  color: #e5e7eb;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin-top: 10px;
 }
 
 .mid-upper-container {
@@ -111,9 +124,15 @@ body {
   color: #f9faf8;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+}
+
 .header-ul {
   display: flex;
   justify-content: space-between;
+  width: 75%;
 }
 
 .header-logo {
@@ -122,7 +141,7 @@ body {
 .header-links {
   display: flex;
   font-size: 18px;
-  gap: 8px;
+  gap: 32px;
 }
 
 .footer {
