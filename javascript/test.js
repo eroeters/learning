@@ -66,34 +66,49 @@
 //   alert("Invalid username");
 // }
 
-//
+// switch statements
 
-const select = document.querySelector("select");
-const para = document.querySelector("p");
+// const select = document.querySelector("select");
+// const para = document.querySelector("p");
 
-select.addEventListener("change", setWeather);
+// select.addEventListener("change", setWeather);
 
-function setWeather() {
-  const choice = select.value;
+// function setWeather() {
+//   const choice = select.value;
 
-  switch (choice) {
-    case "sunny":
-      para.textContent = "It is sunny outside today";
-      break;
+//   switch (choice) {
+//     case "sunny":
+//       para.textContent = "It is sunny outside today";
+//       break;
 
-    case "rainy":
-      para.textContent = "It is rainy outside today";
-      break;
+//     case "rainy":
+//       para.textContent = "It is rainy outside today";
+//       break;
 
-    case "snowing":
-      para.textContent = "It is snowing outside today";
-      break;
+//     case "snowing":
+//       para.textContent = "It is snowing outside today";
+//       break;
 
-    case "overcast":
-      para.textContent = "It is cloudy and overcast today";
-      break;
+//     case "overcast":
+//       para.textContent = "It is cloudy and overcast today";
+//       break;
 
-    default:
-      para.textContent = "";
-  }
-}
+//     default:
+//       para.textContent = "";
+//   }
+// }
+
+// Ternary operators
+
+// const select = document.querySelector("select");
+// const html = document.querySelector("html");
+// document.body.style.padding = "10px";
+
+// function update(bgColor, textColor) {
+//   html.style.backgroundColor = bgColor;
+//   html.style.color = textColor;
+// }
+
+// select.addEventListener("change", () =>
+//   select.value === "black" ? update("black", "white") : update("white", "black")
+// );
