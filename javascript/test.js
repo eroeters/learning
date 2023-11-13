@@ -112,3 +112,11 @@
 // select.addEventListener("change", () =>
 //   select.value === "black" ? update("black", "white") : update("white", "black")
 // );
+
+// Functions
+
+function random(number) {
+  return Math.floor(Math.random() * number + 1);
+}
+
+const text = "I am not your father";
