@@ -15,10 +15,6 @@ button.addEventListener("click", () => {
   ctx.fillRect(x, y, width, height);
 });
 
-// function draw() {
-//   ctx.fillStyle = color;
-//   ctx.fillRect(x, y, width, height);
-// }
 // Don't edit the code below here!
 
 const section = document.querySelector("section");
