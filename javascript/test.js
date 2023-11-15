@@ -120,3 +120,10 @@ function random(number) {
 }
 
 const text = "I am not your father";
+
+const textBox = document.querySelector("#textBox");
+const output = document.querySelector("#output");
+
+textBox.addEventListener("keydown", (event) => {
+  output.textContent = `You pressed "${event.key}."`;
+});
