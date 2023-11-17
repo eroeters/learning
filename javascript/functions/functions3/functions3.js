@@ -18,12 +18,6 @@ function random(min, max) {
   let random = Math.floor(Math.random() * (max - min + 1) + min);
   return random;
 }
-
-// function chooseName() {
-//   let random = Math.floor(Math.random() * names.length);
-//   para.textContent = names[random];
-// }
-
 function chooseName() {
   let randomName = random(0, names.length - 1);
   para.textContent = names[randomName];
