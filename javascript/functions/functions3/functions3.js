@@ -14,10 +14,16 @@ const para = document.createElement("p");
 
 // Add your code here
 
-button.addEventListener("click", () => {
+function random(a, b) {
+  let random = Math.floor(Math.random() * (b - a + 1) + a);
+  return random;
+}
+
+function chooseName() {
   let random = Math.floor(Math.random() * names.length);
   para.textContent = names[random];
-});
+}
+
 // Don't edit the code below here!
 
 const section = document.querySelector("section");

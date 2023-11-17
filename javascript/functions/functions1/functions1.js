@@ -16,6 +16,7 @@ function chooseName() {
   let random = Math.floor(Math.random() * names.length);
   para.textContent = names[random];
 }
+
 // Don't edit the code below here!
 
 const section = document.querySelector("section");
