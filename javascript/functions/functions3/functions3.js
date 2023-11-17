@@ -14,14 +14,20 @@ const para = document.createElement("p");
 
 // Add your code here
 
-function random(a, b) {
-  let random = Math.floor(Math.random() * (b - a + 1) + a);
+function random(min, max) {
+  let random = Math.floor(Math.random() * (max - min + 1) + min);
   return random;
 }
 
+// function chooseName() {
+//   let random = Math.floor(Math.random() * names.length);
+//   para.textContent = names[random];
+// }
+
 function chooseName() {
-  let random = Math.floor(Math.random() * names.length);
-  para.textContent = names[random];
+  let randomName = random(0, names.length - 1);
+  para.textContent = names[randomName];
+  return randomName;
 }
 
 // Don't edit the code below here!
