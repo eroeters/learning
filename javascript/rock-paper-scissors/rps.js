@@ -1,5 +1,9 @@
+// let playerScore = parseInt(document.querySelector("#playerScore").innerText);
+// let computerScore = parseInt(
+//   document.querySelector("#computerScore").innerText
+// );
+
 const playerScore = document.querySelector("#playerScore");
-const computerScore = document.querySelector("#computerScore");
 const playTxt = document.querySelector("#playTxt");
 
 // Random generator for computer choice
@@ -19,8 +23,6 @@ function getComputerChoice() {
 // Takes value of player input and matches it against getComputerChoice function
 
 function playGame() {
-  let playerScore = 0;
-  let computerScore = 0;
   let choice = prompt("Enter Rock, Paper, or Scissors").toLowerCase();
   if (choice == "rock") {
     if (getComputerChoice() == 1) {
