@@ -1,10 +1,7 @@
-// let playerScore = parseInt(document.querySelector("#playerScore").innerText);
-// let computerScore = parseInt(
-//   document.querySelector("#computerScore").innerText
-// );
-
-const playerScore = document.querySelector("#playerScore");
-const playTxt = document.querySelector("#playTxt");
+const computerSelection = getComputerChoice();
+const playerSelection = prompt(
+  "Choose Rock, Paper, or Scissors!"
+).toLowerCase();
 
 // Random generator for computer choice
 // Gets called in playGame function after player clicks Play button
@@ -12,46 +9,24 @@ const playTxt = document.querySelector("#playTxt");
 function getComputerChoice() {
   let selection = Math.floor(Math.random() * 3) + 1;
   if (selection == 1) {
-    return selection;
+    return "rock";
   } else if (selection == 2) {
-    return selection;
+    return "paper";
   } else if (selection == 3) {
-    return selection;
+    return "scissors";
+  }
+}
+
+function playRound(playerSelection, computerSelection) {
+  if (playerSelection === "rock" && computerSelection === "rock") {
+    console.log("You both chose rock, you tied!");
+  } else if (playerSelection === "rock" && computerSelection === "paper") {
+    console.log("The computer chose paper, you lose!");
+  } else if (playerSelection === "rock" && computerSelection === "scissors") {
+    console.log("The computer chose scissors, you win!!");
   }
 }
 
 // Takes value of player input and matches it against getComputerChoice function
 
-function playGame() {
-  let choice = prompt("Enter Rock, Paper, or Scissors").toLowerCase();
-  if (choice == "rock") {
-    if (getComputerChoice() == 1) {
-      playTxt.innerText = "The computer chose rock, you tied!";
-    } else if (getComputerChoice() == 2) {
-      playTxt.innerText =
-        "The computer chose paper, you lose! Paper covers rock";
-    } else if (getComputerChoice() == 3) {
-      playTxt.innerText =
-        "The computer chose scissors, you win! Rock smashes scissors";
-    }
-  } else if (choice == "paper") {
-    if (getComputerChoice() == 1) {
-      playTxt.innerText = "The computer chose rock, you win! Paper covers rock";
-    } else if (getComputerChoice() == 2) {
-      playTxt.innerText = "The computer chose paper, you tied!";
-    } else if (getComputerChoice() == 3) {
-      playTxt.innerText =
-        "The computer chose scissors, you lose! Scissors cuts paper";
-    }
-  } else if (choice == "scissors") {
-    if (getComputerChoice() == 1) {
-      playTxt.innerText =
-        "The computer chose rock, you lose! Rock smashes scissors";
-    } else if (getComputerChoice() == 2) {
-      playTxt.innerText =
-        "The computer chose paper, you win! Scissors cuts paper";
-    } else if (getComputerChoice() == 3) {
-      playTxt.innerText = "The computer chose scissors, you tied!";
-    }
-  }
-}
+// Game function that limits games played and will end after limit is reached
