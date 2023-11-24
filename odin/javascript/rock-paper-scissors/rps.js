@@ -41,7 +41,3 @@ for (let i = 0; i < 5; i++) {
   compChoice = getComputerChoice();
   console.log(playRound(choice, compChoice));
 }
-
-// Takes value of player input and matches it against getComputerChoice function
-
-// Game function that limits games played and will end after limit is reached
