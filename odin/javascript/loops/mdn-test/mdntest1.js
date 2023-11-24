@@ -1,3 +1,5 @@
+// see https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code for examples
+
 const contacts = [
   "Chris:2232322",
   "Sarah:3453456",
@@ -10,16 +12,19 @@ const input = document.querySelector("input");
 const btn = document.querySelector("button");
 
 btn.addEventListener("click", () => {
-  // We store the value entered into the text input in a variable called searchName, before then emptying the text input and focusing it again, ready for the next search. Note that we also run the toLowerCase() method on the string, so that searches will be case-insensitive.
+  // turns value in input box to lower cased variable
   const searchName = input.value.toLowerCase();
+  //   clears input field
   input.value = "";
+  //   keeps cursor in input field
   input.focus();
   para.textContent = "";
   for (const contact of contacts) {
-    // Inside the loop, we first split the current contact at the colon character, and store the resulting two values in an array called splitContact.
+    // variable 'splitContact' used to split array string into new array if found by user search in input field eg. "Chris:2232322" turns into contact["Chris", 2232322]
     const splitContact = contact.split(":");
-    // We then use a conditional statement to test whether splitContact[0] (the contact's name, again lower-cased with toLowerCase()) is equal to the inputted searchName. If it is, we enter a string into the paragraph to report what the contact's number is, and use break to end the loop.
+    // if first name (1st index of 'contact' array after split) of input matches input value, run code
     if (splitContact[0].toLowerCase() === searchName) {
+      // changes text content of <p> to output of split array index (first name and phone number)
       para.textContent = `${splitContact[0]}'s number is ${splitContact[1]}.`;
       break;
     }
