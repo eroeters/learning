@@ -8,16 +8,18 @@ const contacts = [
   "Dianne:9384975",
 ];
 const para = document.querySelector("p");
-const input = document.querySelector("input");
-const btn = document.querySelector("button");
+const search = document.querySelector("#search");
+const searchBtn = document.querySelector("#searchBtn");
+const addBtn = document.querySelector("#addBtn");
+const add = document.querySelector("#add");
 
-btn.addEventListener("click", () => {
+searchBtn.addEventListener("click", () => {
   // turns value in input box to lower cased variable
-  const searchName = input.value.toLowerCase();
+  const searchName = search.value.toLowerCase();
   //   clears input field
-  input.value = "";
+  search.value = "";
   //   keeps cursor in input field
-  input.focus();
+  search.focus();
   para.textContent = "";
   for (const contact of contacts) {
     // variable 'splitContact' used to split array string into new array if found by user search in input field eg. "Chris:2232322" turns into contact["Chris", 2232322]
@@ -32,4 +34,8 @@ btn.addEventListener("click", () => {
   if (para.textContent === "") {
     para.textContent = "Contact not found.";
   }
+});
+
+addBtn.addEventListener("click", () => {
+  contacts.push(add.value.toLowerCase());
 });
