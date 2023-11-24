@@ -2,6 +2,8 @@ const ROCK = "rock";
 const PAPER = "paper";
 const SCISSORS = "scissors";
 
+// random number function to determine computer choice
+
 function getComputerChoice() {
   let choice = Math.floor(Math.random() * 3);
   switch (choice) {
@@ -13,6 +15,8 @@ function getComputerChoice() {
       return SCISSORS;
   }
 }
+
+// switch function to determine use cases for player and computer choices
 
 function playRound(playerChoice, computerChoice) {
   playerChoice = playerChoice.toLowerCase();
@@ -29,6 +33,8 @@ function playRound(playerChoice, computerChoice) {
       return computerChoice == ROCK ? "Player wins!" : "Computer wins!";
   }
 }
+
+// loop for determining game length
 
 for (let i = 0; i < 5; i++) {
   let choice = prompt("Choose Rock, Paper, or Scissors");
