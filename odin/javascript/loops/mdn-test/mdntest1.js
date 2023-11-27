@@ -52,16 +52,17 @@ const continueBtn = document.querySelector("#continueBtn");
 continueBtn.addEventListener("click", () => {
   continuePara.textContent = "Output: ";
   const num = continueInput.value;
-  //   clears input text
+  //   clears input text after button press
   continueInput.value = "";
   //   keeps cursor in input box
   continueInput.focus();
   for (let i = 1; i <= num; i++) {
-    // takes the square root of numbber and then outputs value into paragraph text, loops until input number is met. If square root of number has decimals, loop will skip that output and continue to next incremental number
+    // takes the square root of number and then outputs value into paragraph text, loops until input number is met. If the square root is not an integer(has decimals), loop will skip that output and continue to next incremental number
     let sqRoot = Math.sqrt(i);
     if (Math.floor(sqRoot) !== sqRoot) {
       continue;
     }
     continuePara.textContent += `${i} `;
   }
+  0;
 });
