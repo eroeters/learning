@@ -15,12 +15,7 @@ const refused = document.querySelector(".refused");
 admitted.textContent = "Admit: ";
 refused.textContent = "Refuse: ";
 
-// loop starts here
-
-// refused.textContent += ;
-// admitted.textContent += ;
-
-let i = people.length - 1;
+// If you're iterating through an array or some other object that supports it, and don't need access to the index position of each item, then for...of is the best choice. It's easier to read and there's less to go wrong.
 
 for (const person of people) {
   // while iterating through array, if person is Phil or Lola, update text content in refused para
