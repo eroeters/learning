@@ -11,3 +11,4 @@ const repeatString = function (string, num) {
 module.exports = repeatString;
 
 // test change
+// test change 2
