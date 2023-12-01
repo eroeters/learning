@@ -22,10 +22,9 @@ function mult(...args) {
   return total;
 }
 
-function div(...args) {
-  let total = 1;
+function div(a, ...args) {
   for (const arg of args) {
-    total /= arg;
+    a /= arg;
   }
-  return total;
+  return a;
 }
