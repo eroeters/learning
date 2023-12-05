@@ -21,3 +21,29 @@ para2.textContent = "Me too!";
 div.appendChild(para2);
 
 container.appendChild(div);
+
+// Event test
+
+const buttons = document.querySelectorAll("button");
+const btn = document.querySelector("#btn");
+
+btn.addEventListener("click", function (e) {
+  let value = e.originalTarget.value;
+  console.log(e);
+  console.log(e.target);
+  console.log(value);
+  e.target.style.background = "blue";
+});
+
+// potential use for RPS game
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    if (button.id == "rock") {
+      alert("You pressed the 1st button");
+    } else if (button.id == "paper") {
+      alert("You pressed the 2nd button");
+    } else if (button.id == "scissors") {
+      alert("You pressed the 3rd button");
+    }
+  });
+});
