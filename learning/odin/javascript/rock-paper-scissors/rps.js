@@ -41,3 +41,5 @@ for (let i = 0; i < 5; i++) {
   compChoice = getComputerChoice();
   console.log(playRound(choice, compChoice));
 }
+
+// testing test branch
