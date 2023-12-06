@@ -1,3 +1,5 @@
+// old console RPS game
+
 // const ROCK = "rock";
 // const PAPER = "paper";
 // const SCISSORS = "scissors";
@@ -43,10 +45,6 @@
 // }
 
 // New event listener function for game
-
-// function getComputerChoice() {
-//   return Math.floor(Math.random() * 3);
-// }
 
 const buttons = document.querySelectorAll("button");
 const playerScoreText = document.querySelector("#playerScore");
