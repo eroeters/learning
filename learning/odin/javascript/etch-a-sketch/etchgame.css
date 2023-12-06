@@ -1,5 +1,6 @@
 .box {
   display: flex;
+  flex-direction: row;
   border: 5px solid black;
   height: 200px;
   width: 200px;
