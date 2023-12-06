@@ -1,9 +1,15 @@
-.box {
+#generateGrid {
   display: flex;
-  flex-direction: row;
+}
+
+#gameContainer {
+  display: flex;
+}
+
+.box {
   border: 5px solid black;
-  height: 200px;
-  width: 200px;
+  height: 50px;
+  width: 50px;
 }
 
 .box:hover {
