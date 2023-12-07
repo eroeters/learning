@@ -14,22 +14,24 @@ body {
 #gameContainer {
   display: flex;
   justify-content: center;
-  flex-shrink: 1;
+  overflow: hidden;
   height: 600px;
   width: 600px;
 }
 
 .box {
   border: 1px solid black;
-  overflow: hidden;
   height: 50px;
   width: 50px;
 }
 
-.box:hover {
-  background-color: red;
-}
+/* .resetBox {
+  border: 1px solid black;
+  overflow: hidden;
+  height: 50px;
+  width: 50px;
+} */
 
-.colored {
+.box:hover {
   background-color: red;
 }

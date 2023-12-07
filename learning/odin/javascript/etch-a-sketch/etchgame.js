@@ -1,5 +1,6 @@
 const container = document.querySelector("#gameContainer");
 const generateGrid = document.querySelector("#generateGrid");
+const resetBtn = document.querySelector("#resetBtn");
 
 generateGrid.addEventListener("click", () => {
   container.textContent = "";
@@ -27,10 +28,16 @@ function hoverColor() {
 }
 
 // function resetColor() {
-//   let resetColor = document.querySelectorAll(".box");
+//   let resetColor = document.querySelectorAll(".resetColor");
 //   resetColor.forEach((color) => {
 //     color.addEventListener("mouseover", () => {
 //       color.style.cssText = "background-color: white;";
 //     });
 //   });
 // }
+
+// resetBtn.addEventListener("click", () => {
+//   let resetColor = document.querySelectorAll(".box");
+//   resetColor.classList.remove("box");
+//   resetColor.classList.add("resetBox");
+// });
