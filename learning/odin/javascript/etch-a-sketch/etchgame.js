@@ -13,4 +13,24 @@ generateGrid.addEventListener("click", () => {
       div.appendChild(etchBox);
     }
   }
+  hoverColor();
+  // resetColor();
 });
+
+function hoverColor() {
+  let boxColor = document.querySelectorAll(".box");
+  boxColor.forEach((color) => {
+    color.addEventListener("mouseover", () => {
+      color.style.cssText = "background-color: red;";
+    });
+  });
+}
+
+// function resetColor() {
+//   let resetColor = document.querySelectorAll(".box");
+//   resetColor.forEach((color) => {
+//     color.addEventListener("mouseover", () => {
+//       color.style.cssText = "background-color: white;";
+//     });
+//   });
+// }
