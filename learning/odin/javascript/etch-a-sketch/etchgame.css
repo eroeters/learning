@@ -15,8 +15,8 @@ body {
   display: flex;
   justify-content: center;
   overflow: hidden;
-  height: 600px;
-  width: 600px;
+  height: 50rem;
+  width: 50rem;
 }
 
 .box {
