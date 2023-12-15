@@ -13,7 +13,7 @@ const getAge = function (birth, death) {
   if (!death) {
     death = new Date().getFullYear();
   }
-  return death - birth;
+  return birth - death;
 };
 
 module.exports = findTheOldest;
