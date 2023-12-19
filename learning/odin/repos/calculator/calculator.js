@@ -1,10 +1,10 @@
-const addBtn = document.querySelector("#addBtn");
-const subBtn = document.querySelector("#subBtn");
-const multBtn = document.querySelector("#multBtn");
-const divideBtn = document.querySelector("#divideBtn");
+// const addBtn = document.querySelector("#addBtn");
+// const subBtn = document.querySelector("#subBtn");
+// const multBtn = document.querySelector("#multBtn");
+// const divideBtn = document.querySelector("#divideBtn");
 const displayText = document.querySelector("#displayText");
-const numberBtn = document.querySelector(".numberBtn");
-const operatorBtn = document.querySelector(".operator");
+const numberBtn = document.querySelectorAll(".numberBtn");
+const operatorBtn = document.querySelectorAll(".operator");
 
 function sum(a, b) {
   return a + b;
@@ -27,6 +27,7 @@ let storedNumber = "";
 numberBtn.forEach((number) => {
   number.addEventListener("click", function () {
     storedNumber += number.value;
+    displayText.textContent = storedNumber;
   });
 });
 
