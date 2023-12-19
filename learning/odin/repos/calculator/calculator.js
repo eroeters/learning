@@ -7,6 +7,7 @@ const storedNumText = document.querySelector("#storedNumText");
 const numberBtn = document.querySelectorAll(".numberBtn");
 const operatorBtn = document.querySelectorAll(".operator");
 const allBtn = document.querySelectorAll("button");
+const clearBtn = document.querySelector(".clearBtn");
 
 let firstNum = "";
 let secondNum = "";
@@ -42,6 +43,11 @@ operatorBtn.forEach((operator) => {
     num1 = displayText.textContent;
     console.log(num1);
     storedNumText.textContent = num1;
-    displayText.textContent = "";
+    displayText.textContent = "0";
   });
+});
+
+clearBtn.addEventListener("click", () => {
+  storedNumText.textContent = 0;
+  displayText.textContent = 0;
 });

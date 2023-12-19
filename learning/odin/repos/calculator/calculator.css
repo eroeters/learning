@@ -7,16 +7,20 @@
 
 #displayContainer {
   display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
+  flex-direction: column;
+  align-items: end;
   width: 100%;
-  height: 30px;
+  height: 40px;
   border: 1px solid black;
   background-color: rgb(235, 235, 235);
 }
 
 #displayText {
   padding-right: 10px;
+}
+#storedNumText {
+  font-size: 0.9rem;
+  color: rgb(88, 88, 88);
 }
 
 #btnContainer {
@@ -26,4 +30,11 @@
 button {
   width: 50px;
   height: auto;
+}
+
+button.clearBtn {
+  background-color: green;
+  width: 100px;
+  height: auto;
+  border-radius: 5px;
 }
