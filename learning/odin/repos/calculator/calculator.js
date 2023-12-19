@@ -3,8 +3,13 @@
 // const multBtn = document.querySelector("#multBtn");
 // const divideBtn = document.querySelector("#divideBtn");
 const displayText = document.querySelector("#displayText");
+const storedNumText = document.querySelector("#storedNumText");
 const numberBtn = document.querySelectorAll(".numberBtn");
 const operatorBtn = document.querySelectorAll(".operator");
+const allBtn = document.querySelectorAll("button");
+
+let firstNum = "";
+let secondNum = "";
 
 function sum(a, b) {
   return a + b;
@@ -22,24 +27,21 @@ function divide(a, b) {
   return a / b;
 }
 
-let storedNumber = "";
-
+// updates displayText with clicked on number button
 numberBtn.forEach((number) => {
-  number.addEventListener("click", function () {
-    storedNumber += number.value;
-    displayText.textContent = storedNumber;
+  number.addEventListener("click", () => {
+    firstNum += number.value;
+    displayText.textContent = firstNum;
   });
 });
 
-function operate(num1, num2, operator) {
-  switch (operator) {
-    case "+":
-      return add(num1, num2);
-    case "-":
-      return subtract(num1, num2);
-    case "*":
-      return multiply(num1, num2);
-    case "/":
-      return divide(num1, num2);
-  }
-}
+operatorBtn.forEach((operator) => {
+  let num1 = 0;
+  // gets num1 value of number currently in displayText
+  operator.addEventListener("click", () => {
+    num1 = displayText.textContent;
+    console.log(num1);
+    storedNumText.textContent = num1;
+    displayText.textContent = "";
+  });
+});
