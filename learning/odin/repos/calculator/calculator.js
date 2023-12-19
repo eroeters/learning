@@ -36,8 +36,8 @@ numberBtn.forEach((number) => {
   });
 });
 
-let num1 = 0;
 operatorBtn.forEach((operator) => {
+  let num1 = 0;
   // gets num1 value of number currently in displayText
   operator.addEventListener("click", () => {
     num1 = displayText.textContent;
