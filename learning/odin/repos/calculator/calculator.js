@@ -36,18 +36,22 @@ numberBtn.forEach((number) => {
   });
 });
 
+let num1 = 0;
 operatorBtn.forEach((operator) => {
-  let num1 = 0;
   // gets num1 value of number currently in displayText
   operator.addEventListener("click", () => {
     num1 = displayText.textContent;
-    console.log(num1);
     storedNumText.textContent = num1;
-    displayText.textContent = "0";
+    displayText.textContent = 0;
+    // updates firstNum based on textContent value of displayText window
+    firstNum = Number(num1);
   });
 });
 
+// clears displayText and storedNumText divs
 clearBtn.addEventListener("click", () => {
   storedNumText.textContent = 0;
   displayText.textContent = 0;
 });
+
+function operate(firstNum, secondNum) {}
