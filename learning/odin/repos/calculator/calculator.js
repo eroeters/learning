@@ -14,25 +14,28 @@ let shouldResetScreen = false;
 equalsBtn.addEventListener("click", evaluate);
 clearBtn.addEventListener("click", clear);
 
+// runs appendNumber function each time a number button is clicked
 numberBtn.forEach((button) => {
   button.addEventListener("click", () => {
     appendNumber(button.textContent);
   });
 });
 
+// sets setOperation function to clicked operator button
 operatorBtn.forEach((button) => {
   button.addEventListener("click", () => {
     setOperation(button.textContent);
   });
 });
 
+// appends displayText field to show clicked on numbers
 function appendNumber(number) {
   if (displayText.textContent == 0 || shouldResetScreen) {
     resetScreen();
   }
   displayText.textContent += number;
 }
-
+// stops appendNumber function from adding preceding zeroes
 function resetScreen() {
   displayText.textContent = "";
   shouldResetScreen = false;
@@ -50,29 +53,28 @@ function setOperation(operator) {
   if (currentOperation !== null) {
     evaluate();
   }
+  // assigns first number to current number inside displaytext
   num1 = displayText.textContent;
   currentOperation = operator;
+  // appends storedNumText field to first number and operator that was clicked on
   storedNumText.textContent = `${num1} ${currentOperation}`;
   shouldResetScreen = true;
 }
 
 function evaluate() {
+  // if operator has not been clicked on prior to clicking '=', current displayText field stays the same
   if (currentOperation === null || shouldResetScreen) {
     return;
   } else if (currentOperation === "/" && displayText.textContent == "0") {
     alert("Cannot divide by zero");
     return;
   }
+  // when '=' is clicked, run evaluate function. Set num2 to current textContent of displayText field
   num2 = displayText.textContent;
-  // displayText.textContent == roundResult(operate(currentOperation, num1, num2));
   displayText.textContent = operate(currentOperation, num1, num2);
   storedNumText.textContent = `${num1} ${currentOperation} ${num2}`;
   currentOperation = null;
 }
-
-// function roundResult(number) {
-//   return Math.round(number * 1000) / 1000;
-// }
 
 function add(a, b) {
   return a + b;
@@ -110,6 +112,9 @@ function operate(operator, a, b) {
       return null;
   }
 }
+
+// Old iteration I attempted on my own. Could not figure out why operators weren't working properly
+
 // function operate(num1, num2, operator) {
 //   if (operator == "+") {
 //     // return add(num1, num2)
