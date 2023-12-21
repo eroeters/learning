@@ -2,7 +2,7 @@
   width: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 #displayContainer {
@@ -14,17 +14,17 @@
   border: 1px solid black;
   background-color: rgb(235, 235, 235);
 }
-
+#btnContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 #displayText {
   padding-right: 10px;
 }
 #storedNumText {
   font-size: 0.9rem;
   color: rgb(88, 88, 88);
-}
-
-#btnContainer {
-  display: flex;
 }
 
 button {
