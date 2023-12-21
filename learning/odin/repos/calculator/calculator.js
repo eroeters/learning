@@ -59,8 +59,19 @@ buttons.forEach((button) => {
         storedNumText.textContent = num1;
       } else {
         num2 = Number(displayText.textContent);
+        storedOperator = button.value;
         if (button.value == "+") {
           displayText.textContent = add(num1, num2);
+          return add(num1, num2);
+        } else if (button.value == "-") {
+          displayText.textContent = subtract(num1, num2);
+          return add(num1, num2);
+        } else if (button.value == "x") {
+          displayText.textContent = multiply(num1, num2);
+          return add(num1, num2);
+        } else if (button.value == "/") {
+          displayText.textContent = divide(num1, num2);
+          return add(num1, num2);
         }
       }
     }
@@ -69,8 +80,10 @@ buttons.forEach((button) => {
 
 // // clears displayText and storedNumText divs
 clearBtn.addEventListener("click", () => {
-  storedNumText.textContent = 0;
-  displayText.textContent = 0;
+  storedNumText.textContent = "";
+  displayText.textContent = "";
+  storedOperator = "";
+  storedNumer = "";
   num1 = 0;
   num2 = 0;
 });
