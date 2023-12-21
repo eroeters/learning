@@ -39,6 +39,8 @@ function operate(num1, num2, operator) {
 
 let num1 = 0;
 let num2 = 0;
+let storedNumber = 0;
+let storedOperator = "";
 
 buttons.forEach((button) => {
   displayText.textContent = "";
@@ -48,11 +50,29 @@ buttons.forEach((button) => {
       displayText.textContent += button.value;
       // if the button is an operator, assign value, and change display to match
     } else if (button.classList.contains("operator")) {
-      num1 = Number(displayText.textContent);
-      displayText.textContent = 0;
-      storedNumText.textContent = num1;
+      // if the storedNumber section is blank, assign num1 and store operator
+      if (storedNumber == 0) {
+        num1 = Number(displayText.textContent);
+        displayText.textContent = "";
+        storedNumber = num1;
+        storedOperator = button.value;
+        storedNumText.textContent = num1;
+      } else {
+        num2 = Number(displayText.textContent);
+        if (button.value == "+") {
+          displayText.textContent = add(num1, num2);
+        }
+      }
     }
   });
+});
+
+// // clears displayText and storedNumText divs
+clearBtn.addEventListener("click", () => {
+  storedNumText.textContent = 0;
+  displayText.textContent = 0;
+  num1 = 0;
+  num2 = 0;
 });
 
 // // updates displayText with clicked on number button
@@ -73,10 +93,4 @@ buttons.forEach((button) => {
 //     // updates firstNum based on textContent value of displayText window
 //     firstNum = Number(num1);
 //   });
-// });
-
-// // // clears displayText and storedNumText divs
-// clearBtn.addEventListener("click", () => {
-//   storedNumText.textContent = 0;
-//   displayText.textContent = 0;
 // });
