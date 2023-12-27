@@ -4,9 +4,11 @@ html {
 
 table {
   border-collapse: collapse;
-  border: 2px solid rgb(200, 200, 200);
+  border: 2px solid black;
   letter-spacing: 1px;
   font-size: 0.8rem;
+  max-width: min-content;
+  background-color: rgb(240, 240, 240);
 }
 
 td,
@@ -21,4 +23,18 @@ td {
 
 caption {
   padding: 10px;
+}
+
+td,
+th,
+tr {
+  border: 1px solid black;
+}
+
+.bgColor {
+  background-color: rgb(204, 204, 204);
+}
+
+#bgBlank {
+  background-color: rgb(240, 240, 240);
 }
