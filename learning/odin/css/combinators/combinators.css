@@ -95,3 +95,9 @@ h1 {
     }
   }
 }
+
+.card:hover {
+  background-color: aqua;
+  box-shadow: 7px 3px 3px #004d40;
+  transform: translate(0, 2px);
+}
