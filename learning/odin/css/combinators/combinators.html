@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Combinators</title>
+    <link rel="stylesheet" href="combinators.css" />
+  </head>
+  <body>
+    <!-- see MDN docs that I used for tests https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators -->
+    <h1>Combinator Playground</h1>
+    <p>I'm a test paragraph to play around with css nesting</p>
+    <p>I'm a test paragraph to play around with css nesting</p>
+    <!-- compound selector test -->
+    <div class="a">
+      <p class="b"></p>
+      <p class="a b"></p>
+    </div>
+    <div class="notices">
+      <div class="notice">
+        <h2 class="notice-heading">Notice</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <div class="notice warning">
+        <h2 class="warning-heading">Warning</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <div class="notice success">
+        <h2 class="success-heading">Success</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <article class="card">
+        <h2>Card 1</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+      </article>
+      <article class="card featured">
+        <h2>Card 2</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+      </article>
+      <article class="card">
+        <h2>Card 3</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+      </article>
+    </div>
+  </body>
+</html>

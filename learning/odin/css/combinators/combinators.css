@@ -1,0 +1,97 @@
+div p {
+  border: 4px solid black;
+  height: 20px;
+  width: auto;
+}
+
+h1 {
+  background-color: purple;
+  /* this can be written without nesting like h1 ~ p {} */
+  ~ p {
+    background-color: black;
+    color: white;
+  }
+}
+
+/* compound selectors */
+
+.a {
+  background-color: black;
+  .b {
+    background-color: blue;
+  }
+  &.b {
+    background-color: purple;
+  }
+}
+
+/* long form compund selector writtin like this: */
+
+/* .a {
+  background-color: black;
+}
+
+.b {
+  background-color: blue;
+}
+
+.a.b {
+  background-color: purple;
+} */
+
+.notices {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 90%;
+  margin: auto;
+}
+.notice {
+  width: 90%;
+  justify-content: center;
+  border-radius: 1rem;
+  border: 2px solid black;
+  background-color: #ffc107;
+  color: black;
+  padding: 1rem;
+  .notice-heading:before {
+    content: "ℹ︎ ";
+  }
+  &.warning {
+    background-color: #d81b60;
+    border-color: #d81b60;
+    color: white;
+    .warning-heading:before {
+      content: "! ";
+    }
+  }
+  &.success {
+    background-color: #004d40;
+    border-color: #004d40;
+    color: white;
+    .success-heading:before {
+      content: "✓ ";
+    }
+  }
+}
+
+/* appending nesting selector */
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
+  font-family: system-ui;
+}
+
+.card {
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  & h2 {
+    color: slateblue;
+    .featured & {
+      color: tomato;
+    }
+  }
+}

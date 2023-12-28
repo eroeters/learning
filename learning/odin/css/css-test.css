@@ -16,8 +16,6 @@
   overflow: scroll;
 }
 
-#rightMainContainer {
-}
 .pTest2 {
   background-color: pink;
   font-family: Verdana, "DejaVu Sans", sans-serif;
@@ -109,4 +107,37 @@ div.text {
   color: rgb(0, 0, 0);
   font-weight: 800;
   font-size: 14px;
+}
+
+/* css combinators on TOP */
+
+main div {
+  border: 5px solid black;
+}
+main > div {
+  /* background-color: blue;
+  color: white; */
+  height: 90px;
+}
+
+main > div > div {
+  /* background-color: pink; */
+  height: 40px;
+}
+
+.group1 + div {
+  /* background-color: green; */
+  height: 40px;
+}
+
+main {
+  background-color: yellow;
+}
+
+.group1 + div + div {
+  /* background-color: purple; */
+}
+
+.group1 ~ div {
+  background-color: purple;
 }
