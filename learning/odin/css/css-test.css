@@ -1,61 +1,73 @@
 /* CSS Test Files */
 
 .h1Test {
-    background-color: red;
-    color: white;
-    text-align: center;
+  background-color: red;
+  color: white;
+  text-align: center;
 }
 
+.mainBodyContainer {
+  display: flex;
+}
+
+#leftScrollContainer {
+  width: 100px;
+  height: 500px;
+  overflow: scroll;
+}
+
+#rightMainContainer {
+}
 .pTest2 {
-    background-color: pink;
-    font-family: Verdana, "DejaVu Sans", sans-serif;
+  background-color: pink;
+  font-family: Verdana, "DejaVu Sans", sans-serif;
 }
 
 .row3,
 .div2 {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .div1 {
-    font-size: 36px;
-    color: blue;
+  font-size: 36px;
+  color: blue;
 }
 
 .div2 {
-    background-color: green;
-    font-weight: bold;
+  background-color: green;
+  font-weight: bold;
 }
 
 .testBtn1 {
-    font-size: 28px;
-    font-family: Helvetica, "Time New Roman", sans-serif;
-    text-align: center;
-    margin: auto;
+  font-size: 28px;
+  font-family: Helvetica, "Time New Roman", sans-serif;
+  text-align: center;
+  margin: auto;
 }
 .btn1 {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
 
 .btn2 {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 .avatar.proportioned {
-    width: 300px;
-    height: auto;
+  width: 300px;
+  height: auto;
 }
 
 .avatar.distorted {
-    width: 200px;
-    height: 400px;
+  width: 200px;
+  height: 400px;
 }
 
 .container .text {
-    background-color: yellow;
-    color: red;
-    font-size: 20px;
-    text-align: center;
+  background-color: yellow;
+  color: red;
+  font-size: 20px;
+  text-align: center;
 }
 
 /* Cascade Fix */
@@ -67,8 +79,8 @@
 }
 
 .para {
-    font-size: 22px;
-  }
+  font-size: 22px;
+}
 
 .small-para {
   font-size: 14px;
@@ -79,7 +91,7 @@
   background: green;
   color: white;
   font-weight: bold;
-} 
+}
 
 .button {
   background-color: rgb(255, 255, 255);
@@ -88,14 +100,13 @@
 }
 
 div.text {
-    color: rgb(0, 0, 0);
-    font-size: 22px;
-    font-weight: 100;
-  }
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+  font-weight: 100;
+}
 
 .text.child {
   color: rgb(0, 0, 0);
   font-weight: 800;
   font-size: 14px;
 }
-
