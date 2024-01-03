@@ -1,0 +1,37 @@
+.parent {
+  background-color: blue;
+  height: 300vh;
+  padding: 10px;
+  color: white;
+  font-size: 1.5rem;
+  width: 90%;
+  position: relative;
+}
+
+.child {
+  height: 90px;
+  color: black;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.child-one {
+  background-color: green;
+  /* position absolute fixes element to parent that has relative or absolute position, will position it to the side chosen of the html element. basically removes the child from the container and allows overlapping, which is why position: absolute and right allows the 2nd child to move up and they're both on the same line */
+  position: absolute;
+  top: 0;
+}
+
+.child-two {
+  background-color: orange;
+  /* position fixed removes from parent container and forces to top/bottom/left/right of the html document, which keeps it there if you scroll */
+  position: fixed;
+  bottom: 0;
+}
+
+.child-three {
+  background-color: pink;
+  /* sticky fixed to page based on position entered, like this one will keep the element stuck to the top of the page while scrolling */
+  position: sticky;
+  top: 0;
+}
