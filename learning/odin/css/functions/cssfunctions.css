@@ -55,7 +55,11 @@ body {
   max-height: 100%;
 }
 
-/* For min() if there are 150px available to the image, it will take up all 150px. If there are not 150px available, the image will switch to 100% of the parent’s width */
+/* For min() if there are 150px available to the element, it will take up all 150px. If there are not 150px available, the element will switch to 100% of the parent’s width */
+
+/* for max(), the element would fill the container until the designated max is set. Eg (max(50%), 400px) - the element would fill 50% of the container until 400px is met, then stay that size during resizing */
+
+/* for clamp example: clamp(350px, 50%, 500px); the image will start at 500px and will stay that size until container hits 50% size, then will continue to shrink until staying at 350px */
 
 #iconHolder {
   width: min(150px, 100%);
@@ -65,6 +69,14 @@ body {
   border: 6px solid blue;
 }
 
-/* h1 {
-  font-size: clamp(100px, 50vw, 10rem);
-} */
+#h1Container {
+  border: 5px solid black;
+  /* resize: both;
+  overflow: auto; */
+  margin-bottom: 20px;
+  /* width: clamp(100px, 50%, 400px); */
+}
+
+h1 {
+  font-size: clamp(1rem, 10vw, 2rem);
+}
