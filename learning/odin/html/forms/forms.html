@@ -9,33 +9,33 @@
   </head>
   <body>
     <form action="https://httpbin.org/post" method="post" target="_blank">
-      <label for="first_name">First Name:</label>
-      <input
-        type="text"
-        id="first_name"
-        name="first_name"
-        placeholder="Enter your first name..."
-      />
-      <p id="submitText"></p>
-      <br />
-      <label for="user_email">Email Address:</label>
-      <input
-        type="email"
-        id="user_email"
-        name="email"
-        placeholder="you@example.com"
-      />
-      <br />
-      <label for="user_password">Password:</label>
-      <input type="password" id="user_password" name="password" />
-      <br />
-      <label for="amount">Amount:</label>
-      <input type="number" id="amount" name="amount" />
-      <br />
-      <label for="dob">Date of Birth:</label>
-      <input type="date" id="dob" name="dob" />
-      <textarea name="" id="" cols="30" rows="10"></textarea>
-      <button class="button">Submit</button>
+      <fieldset>
+        <legend>Contact Information</legend>
+        <ul class="sectionContent">
+          <li>
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" />
+          </li>
+          <li>
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" />
+          </li>
+          <li>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" />
+          </li>
+          <li>
+            <label for="email">Email Address:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+            />
+          </li>
+          <button>Submit</button>
+        </ul>
+      </fieldset>
     </form>
   </body>
 </html>
