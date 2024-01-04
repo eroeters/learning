@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+    <link rel="stylesheet" href="forms.css" />
+    <script src="forms.js" async></script>
+  </head>
+  <body>
+    <form action="https://httpbin.org/post" method="post" target="_blank">
+      <label for="first_name">First Name:</label>
+      <input
+        type="text"
+        id="first_name"
+        name="first_name"
+        placeholder="Enter your first name..."
+      />
+      <p id="submitText"></p>
+      <br />
+      <label for="user_email">Email Address:</label>
+      <input
+        type="email"
+        id="user_email"
+        name="email"
+        placeholder="you@example.com"
+      />
+      <br />
+      <label for="user_password">Password:</label>
+      <input type="password" id="user_password" name="password" />
+      <br />
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount" name="amount" />
+      <br />
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" />
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+      <button class="button">Submit</button>
+    </form>
+  </body>
+</html>
