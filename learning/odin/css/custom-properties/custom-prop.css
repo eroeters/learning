@@ -1,0 +1,139 @@
+/* theme selector */
+/* :root.dark {
+  --border-btn: 1px solid rgb(220, 220, 220);
+  --color-base-bg: rgb(18, 18, 18);
+  --color-base-text: rgb(240, 240, 240);
+  --color-btn-bg: rgb(36, 36, 36);
+}
+
+:root.light {
+  --border-btn: 1px solid rgb(36, 36, 36);
+  --color-base-bg: rgb(240, 240, 240);
+  --color-base-text: rgb(18, 18, 18);
+  --color-btn-bg: rgb(220, 220, 220);
+}
+
+body,
+.theme-toggle {
+  color: var(--color-base-text);
+}
+
+body {
+  background-color: var(--color-base-bg);
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.theme-toggle {
+  background-color: var(--color-btn-bg);
+  border: var(--border-btn);
+  font-size: 1.125rem;
+  padding: 10px 20px;
+}
+
+.theme-toggle:hover {
+  cursor: pointer;
+}
+
+.theme-toggle:focus {
+  outline: var(--border-btn);
+} */
+
+/* following along with: https://www.youtube.com/watch?v=PHO6TBq_auI */
+:root {
+  --dark: #00bd9d;
+  --light: #8bd7d2;
+  --white: #fffbfa;
+
+  --font: "Merriweather Sans", sans-serif;
+  --fc: var(--dark);
+
+  --sec-pad: 150px 0;
+  --mw: 800px;
+  --w: 90%;
+  --gap: 2em;
+}
+
+body {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  text-align: center;
+  color: var(--primary-clr);
+  font-family: var(--font);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var();
+}
+
+h1 {
+  margin-bottom: 1em;
+}
+
+.button {
+  background-color: var(--white);
+  color: var(--dark);
+  width: 200px;
+  height: auto;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold;
+  padding: 0.25em 1em;
+}
+
+.intro {
+  background-color: var(--dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  text-align: center;
+  height: 400px;
+}
+
+.intro > h1 {
+  color: var(--white);
+}
+
+.sales-points {
+  display: flex;
+  justify-content: center;
+  background-color: var(--light);
+  padding: var(--sec-pad);
+}
+
+.columns {
+  display: grid;
+  margin: 0 auto;
+  width: 50%;
+  gap: var(--gap);
+}
+
+.three {
+  @media (min-width: 650px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.four {
+  @media (min-width: 650px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
