@@ -13,12 +13,14 @@
         <legend>Contact Information</legend>
         <ul class="sectionContent">
           <li>
-            <label for="first_name">First Name:</label>
-            <input type="text" id="first_name" name="first_name" />
+            <label for="first_name"
+              ><span class="req">*</span>First Name:</label
+            >
+            <input type="text" id="first_name" name="first_name" required />
           </li>
           <li>
-            <label for="last_name">Last Name:</label>
-            <input type="text" id="last_name" name="last_name" />
+            <label for="last_name"><span class="req">*</span>Last Name:</label>
+            <input type="text" id="last_name" name="last_name" required />
           </li>
           <li>
             <label for="dob">Date of Birth:</label>
@@ -32,6 +34,24 @@
               name="email"
               placeholder="you@example.com"
             />
+          </li>
+          <li>
+            <label for="website">Website URL:</label>
+            <input type="url" name="website" id="website" />
+          </li>
+          <!-- pattern validation -->
+          <li>
+            <label for="choose">Would you prefer a banana or a cherry?</label>
+            <input
+              type="text"
+              id="choose"
+              name="choose"
+              required
+              pattern="[Bb]anana|[Cc]herry"
+            />
+          </li>
+          <li>
+            <input type="text" />
           </li>
           <button>Submit</button>
         </ul>
