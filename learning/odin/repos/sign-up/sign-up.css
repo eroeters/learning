@@ -6,6 +6,10 @@ body {
   font-family: sans-serif;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .container {
   display: flex;
 }
@@ -38,4 +42,17 @@ body {
 
 .right-content {
   width: 60%;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-form {
+  display: flex;
+}
+
+.right-form {
+  display: flex;
 }
