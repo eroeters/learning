@@ -7,60 +7,42 @@
     <link rel="stylesheet" href="sign-up.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="left-content">
+    <div class="main-container">
+      <div class="left-content-container">
         <div class="logo-container">
           <img src="odin-lined.png" alt="" class="logo" />
           <span class="logo-text">ODIN</span>
         </div>
       </div>
-      <div class="right-content">
-        <div class="header-content"></div>
-        <fieldset>
-          <div class="form-content">
-            <h3>Let's do this!</h3>
-            <form action="">
-              <div class="left-form">
-                <ul>
-                  <li><label for="first-name">First Name</label></li>
-                  <li>
-                    <input type="text" id="first-name" name="first-name" />
-                  </li>
-                  <li><label for="email">Email</label></li>
-                  <li>
-                    <input type="email" id="email" name="email" />
-                  </li>
-                  <li><label for="password">Password</label></li>
-                  <li>
-                    <input
-                      type="password"
-                      id="password"
-                      name="password"
-                      required
-                    />
-                  </li>
-                </ul>
+      <div class="right-content-container">
+        <div class="right-top-container"></div>
+        <div class="right-middle-container">
+          <form action="">
+            <fieldset>
+              <h3>Let's do this!</h3>
+              <div class="form-container">
+                <div class="left-form-content">
+                  <label for="">First Name</label>
+                  <input type="text" />
+                  <label for="">Email</label>
+                  <input type="text" />
+                  <label for="">Password</label>
+                  <input type="text" />
+                </div>
+                <div class="right-form-content">
+                  <label for="">Last Name</label>
+                  <input type="text" />
+                  <label for="">Phone Number</label>
+                  <input type="text" />
+                  <label for="">Confirm Password</label>
+                  <input type="text" />
+                </div>
               </div>
-              <div class="right-form">
-                <ul>
-                  <li><label for="last-name">Last Name</label></li>
-                  <li>
-                    <input
-                      type="text"
-                      id="last-name"
-                      name="last-name"
-                      required
-                    />
-                  </li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                </ul>
-              </div>
-            </form>
-          </div>
-        </fieldset>
+            </fieldset>
+            <button class="create-account">Create Account</button>
+          </form>
+        </div>
+        <div class="right-bottom-container"></div>
       </div>
     </div>
   </body>

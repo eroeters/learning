@@ -10,11 +10,11 @@ ul {
   list-style-type: none;
 }
 
-.container {
+.main-container {
   display: flex;
 }
 
-.left-content {
+.left-content-container {
   background-image: url("/odin/repos/sign-up/greenleaf.avif");
   width: 30%;
   height: 100vh;
@@ -40,19 +40,55 @@ ul {
   font-family: "Amatic SC", sans-serif;
 }
 
-.right-content {
-  width: 60%;
-}
+/* right side info */
 
-.form-content {
+.right-content-container {
   display: flex;
   flex-direction: column;
+  border: 5px solid black;
+  width: 100%;
+  background-color: grey;
+}
+.right-top-container {
+  border: 5px solid blue;
+  height: 33%;
+  width: 100%;
 }
 
-.left-form {
+.right-middle-container {
   display: flex;
+  border: 5px solid red;
+  height: 33%;
+  width: 100%;
 }
 
-.right-form {
+fieldset {
+  background-color: white;
+  width: 100%;
+}
+
+.form-container {
   display: flex;
+  width: 100%;
+}
+
+.left-form-content {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid orange;
+  width: 40%;
+  height: 100%;
+}
+.right-form-content {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid aqua;
+  width: 40%;
+  height: 100%;
+}
+
+.right-bottom-container {
+  border: 5px solid green;
+  height: 33%;
+  width: 100%;
 }
