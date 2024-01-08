@@ -45,50 +45,43 @@ ul {
 .right-content-container {
   display: flex;
   flex-direction: column;
-  border: 5px solid black;
   width: 100%;
-  background-color: grey;
+  background-color: rgb(222, 232, 238);
+  margin: 0;
 }
 .right-top-container {
-  border: 5px solid blue;
   height: 33%;
-  width: 100%;
 }
 
 .right-middle-container {
   display: flex;
-  border: 5px solid red;
-  height: 33%;
+  height: 25%;
   width: 100%;
-}
-
-fieldset {
   background-color: white;
-  width: 100%;
+  padding-left: 50px;
+  border: 2px solid rgb(197, 203, 207);
 }
 
 .form-container {
   display: flex;
   width: 100%;
+  gap: 50px;
 }
 
 .left-form-content {
   display: flex;
   flex-direction: column;
-  border: 2px solid orange;
   width: 40%;
   height: 100%;
 }
 .right-form-content {
   display: flex;
   flex-direction: column;
-  border: 2px solid aqua;
   width: 40%;
   height: 100%;
 }
 
 .right-bottom-container {
-  border: 5px solid green;
   height: 33%;
   width: 100%;
 }
