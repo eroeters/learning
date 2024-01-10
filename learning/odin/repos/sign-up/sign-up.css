@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Roboto:wght@400;700&display=swap");
 
+:root {
+  --border: #d5d7dd;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -50,7 +54,8 @@ ul {
   margin: 0;
 }
 .right-top-container {
-  height: 33%;
+  padding: 150px 0 40px 50px;
+  font-size: 1.3rem;
 }
 
 .right-middle-container {
@@ -59,7 +64,8 @@ ul {
   width: 100%;
   background-color: white;
   padding-left: 50px;
-  border: 2px solid rgb(197, 203, 207);
+  border: 2px solid var(--border);
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.158);
 }
 
 .form-container {
@@ -81,9 +87,31 @@ ul {
   height: 100%;
 }
 
+input {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  width: 250px;
+}
+
 .right-bottom-container {
   height: 33%;
   width: 100%;
+  padding-left: 50px;
+}
+
+.create-account-btn {
+  background-color: #596d48;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 40px;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+a {
+  color: #596d48;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 /* test */
