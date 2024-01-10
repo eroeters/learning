@@ -3,7 +3,7 @@ const password = document.querySelector("#password");
 const confirmPass = document.querySelector("#confirm-pass");
 
 button.addEventListener("click", () => {
-  if (password !== confirmPass) {
+  if (password.value !== confirmPass.value) {
     alert("Passwords must match");
   }
 });
