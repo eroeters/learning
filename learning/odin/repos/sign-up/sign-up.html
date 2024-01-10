@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up</title>
     <link rel="stylesheet" href="sign-up.css" />
+    <script src="sign-up.js" async></script>
   </head>
   <body>
     <div class="main-container">
@@ -29,20 +30,25 @@
             <h3>Let's do this!</h3>
             <div class="form-container">
               <div class="left-form-content">
-                <label for="">First Name</label>
-                <input type="text" required />
-                <label for="">Email</label>
-                <input type="email" placeholder="you@example.com" required />
-                <label for="">Password</label>
-                <input type="password" required />
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" required />
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  placeholder="you@example.com"
+                  id="email"
+                  required
+                />
+                <label for="password">Password</label>
+                <input type="password" id="password" required />
               </div>
               <div class="right-form-content">
-                <label for="">Last Name</label>
-                <input type="text" required />
-                <label for="">Phone Number</label>
-                <input type="text" required />
-                <label for="">Confirm Password</label>
-                <input type="password" required />
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" required />
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" required />
+                <label for="confirm-pass">Confirm Password</label>
+                <input type="password" id="confirm-pass" required />
               </div>
             </div>
           </form>
