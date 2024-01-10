@@ -20,7 +20,7 @@ ul {
 }
 
 .left-content-container {
-  background-image: url("/odin/repos/sign-up/greenleaf.avif");
+  background-image: url("/odin/projects/sign-up/greenleaf.avif");
   width: 30%;
   height: 100vh;
   background-size: cover;
@@ -68,6 +68,8 @@ ul {
   border: 2px solid var(--border);
   box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.158);
 }
+
+/* form */
 
 .form-container {
   display: flex;
