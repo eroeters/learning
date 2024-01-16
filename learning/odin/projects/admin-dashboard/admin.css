@@ -1,4 +1,41 @@
-#search-icon {
-  height: 30px;
-  width: 30px;
+.container {
+  display: grid;
+  grid-template: 0.5fr 1fr 1fr / 0.3fr 1.5fr 0.5fr;
+}
+
+.header-container {
+  display: grid;
+  grid-row: 1;
+  grid-column: 2/4;
+}
+
+.sidebar-container {
+  display: grid;
+  grid-row: 1/4;
+}
+
+.main-content-container {
+  display: grid;
+}
+
+.projects-container {
+  grid-row: 2/4;
+  grid-column: 2/3;
+}
+
+.announcements {
+  display: grid;
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.trending {
+  display: grid;
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.icon {
+  height: 20px;
+  width: 20px;
 }
