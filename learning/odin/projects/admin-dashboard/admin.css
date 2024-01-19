@@ -8,7 +8,8 @@ body {
 
 :root {
   --blue: rgb(31, 109, 145);
-  --grey: #1a49481f;
+  --grey: #b6c2c2;
+  --orange: rgb(231, 167, 46);
 }
 
 .icon {
@@ -83,4 +84,13 @@ a {
   display: grid;
   grid-template: auto auto / 3fr 1fr;
   background: var(--grey);
+}
+
+.card-container {
+  width: 400px;
+  height: 200px;
+  border-left: 8px solid var(--orange);
+  border-radius: 8px;
+  box-shadow: 3px 3px 1px var(--grey);
+  background-color: white;
 }
