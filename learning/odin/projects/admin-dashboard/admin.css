@@ -8,8 +8,9 @@ body {
 
 :root {
   --blue: rgb(31, 109, 145);
-  --grey: #b6c2c2;
+  --grey: #c0cece;
   --orange: rgb(231, 167, 46);
+  --border: #a2adad;
 }
 
 .icon {
@@ -76,8 +77,47 @@ a {
 .user-info {
   display: flex;
   align-items: center;
+  gap: 10px;
+  margin-right: 40px;
 }
 
+.profile-pic-small {
+  height: 30px;
+  width: 30px;
+  background-color: var(--orange);
+  border-radius: 20px;
+}
+
+.bottom-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.profile-pic-large {
+  height: 60px;
+  width: 60px;
+  background-color: var(--orange);
+  border-radius: 50px;
+}
+
+.current-user-container {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 30px;
+}
+
+.profile-intro {
+  margin-left: 20px;
+  padding: 0;
+}
+
+.functionBtn {
+  background-color: var(--blue);
+  color: white;
+  width: 70px;
+  height: 30px;
+  border-radius: 20px;
+}
 /*     main content     */
 
 .main-content-container {
@@ -91,6 +131,6 @@ a {
   height: 200px;
   border-left: 8px solid var(--orange);
   border-radius: 8px;
-  box-shadow: 3px 3px 1px var(--grey);
+  box-shadow: 3px 3px 1px var(--border);
   background-color: white;
 }
