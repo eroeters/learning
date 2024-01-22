@@ -35,6 +35,7 @@ a {
   grid-row: 1/3;
   display: flex;
   flex-direction: column;
+  padding-left: 20px;
 }
 
 .logo-container {
@@ -42,10 +43,26 @@ a {
   align-items: center;
 }
 
+.sidebar-items {
+  font-size: 0.9rem;
+}
+
+.sidebar-items > a {
+  gap: 15px;
+}
+
 .sb-item {
   color: white;
   display: flex;
   align-items: center;
+}
+
+.sidebar-settings {
+  margin-top: 50px;
+}
+
+.sidebar-settings > a {
+  gap: 15px;
 }
 
 /*     header     */
@@ -117,6 +134,7 @@ a {
   width: 70px;
   height: 30px;
   border-radius: 20px;
+  border: none;
 }
 /*     main content     */
 
@@ -133,4 +151,5 @@ a {
   border-radius: 8px;
   box-shadow: 3px 3px 1px var(--border);
   background-color: white;
+  font-size: 0.8rem;
 }
