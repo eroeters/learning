@@ -14,8 +14,8 @@ body {
 }
 
 .icon {
-  height: 15px;
-  width: 15px;
+  height: 20px;
+  width: 20px;
 }
 
 .logo-icon {
@@ -150,14 +150,41 @@ a {
   display: grid;
   grid-template: auto auto / 3fr 1fr;
   background: var(--grey);
+  padding: 20px;
 }
 
+.project-container {
+}
+
+/* cards */
 .card-container {
-  width: 400px;
-  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 250px;
+  height: 150px;
   border-left: 8px solid var(--orange);
   border-radius: 8px;
   box-shadow: 3px 3px 1px var(--border);
   background-color: white;
   font-size: 0.8rem;
+  margin: 0 0 20px 0;
+  padding-left: 20px;
+}
+
+.card-title {
+  font-size: 0.7rem;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.card-body {
+  font-size: 0.6rem;
+  width: 70%;
+}
+.card-icons {
+  display: flex;
+  justify-content: right;
+  gap: 20px;
+  padding-right: 10px;
 }
