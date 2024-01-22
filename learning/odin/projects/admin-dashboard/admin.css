@@ -164,7 +164,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 250px;
+  width: 75%;
   height: 150px;
   border-left: 8px solid var(--orange);
   border-radius: 8px;
