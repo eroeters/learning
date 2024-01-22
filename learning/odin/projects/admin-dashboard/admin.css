@@ -154,6 +154,7 @@ a {
 }
 
 /* cards */
+
 .card-container {
   display: flex;
   flex-direction: column;
@@ -195,9 +196,6 @@ a {
   padding: 15px;
 }
 
-.announcement-section {
-}
-
 .announcement-section:nth-child(2) {
   border-top: 2px solid var(--border);
   border-bottom: 2px solid var(--border);
@@ -213,4 +211,36 @@ a {
 
 .announcement-body {
   font-size: 0.5rem;
+}
+
+/* trending  */
+
+.trending-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 3px 3px 1px var(--border);
+  padding: 10px;
+}
+
+.trending-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 0 5px 0;
+}
+
+.trending-user-info {
+  margin-left: 20px;
+  width: 100px;
+}
+
+.trending-userid {
+  font-size: 0.6rem;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.trending-username {
+  font-size: 0.6rem;
+  margin: 5px;
 }
