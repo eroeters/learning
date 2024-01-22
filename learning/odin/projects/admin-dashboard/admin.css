@@ -10,7 +10,7 @@ body {
   --blue: rgb(31, 109, 145);
   --grey: #c0cece;
   --orange: rgb(231, 167, 46);
-  --border: #a2adad;
+  --border: #a2adad96;
 }
 
 .icon {
@@ -153,9 +153,6 @@ a {
   padding: 20px;
 }
 
-.project-container {
-}
-
 /* cards */
 .card-container {
   display: flex;
@@ -187,4 +184,33 @@ a {
   justify-content: right;
   gap: 20px;
   padding-right: 10px;
+}
+
+/* announcements */
+
+.announcement-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 3px 3px 1px var(--border);
+  padding: 15px;
+}
+
+.announcement-section {
+}
+
+.announcement-section:nth-child(2) {
+  border-top: 2px solid var(--border);
+  border-bottom: 2px solid var(--border);
+  padding: 10px 0 10px 0;
+  margin: 10px 0 10px 0;
+}
+
+.announcement-header {
+  font-size: 0.6rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.announcement-body {
+  font-size: 0.5rem;
 }
