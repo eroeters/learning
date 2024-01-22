@@ -14,13 +14,13 @@ body {
 }
 
 .icon {
-  height: 20px;
-  width: 20px;
+  height: 15px;
+  width: 15px;
 }
 
 .logo-icon {
-  height: 40px;
-  width: 40px;
+  height: 25px;
+  width: 25px;
 }
 
 a {
@@ -41,14 +41,19 @@ a {
 .logo-container {
   display: flex;
   align-items: center;
+  margin-bottom: 20px;
 }
 
+.logo-container > div {
+  margin-left: 5px;
+}
 .sidebar-items {
   font-size: 0.9rem;
 }
 
 .sidebar-items > a {
   gap: 15px;
+  height: 30px;
 }
 
 .sb-item {
@@ -63,6 +68,7 @@ a {
 
 .sidebar-settings > a {
   gap: 15px;
+  height: 30px;
 }
 
 /*     header     */
