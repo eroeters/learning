@@ -153,6 +153,11 @@ a {
   padding: 20px;
 }
 
+.card-grid-container {
+  display: grid;
+  grid-template: auto auto / 1fr 1fr;
+}
+
 /* cards */
 
 .card-container {
