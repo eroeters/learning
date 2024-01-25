@@ -130,55 +130,69 @@
 
 // object constructors
 
-function Book(title, author, pageCount) {
-  this.title = title;
-  this.author = author;
-  this.pageCount = pageCount;
-  this.info = function () {
-    return `"${title}" by ${author}, ${pageCount} pages long`;
-  };
-}
+// function Book(title, author, pageCount) {
+//   this.title = title;
+//   this.author = author;
+//   this.pageCount = pageCount;
+//   this.info = function () {
+//     return `"${title}" by ${author}, ${pageCount} pages long`;
+//   };
+// }
 
-const hobbit = new Book("The Lord of the Rings", "J.R.R. Tolkien", 20000);
+// const hobbit = new Book("The Lord of the Rings", "J.R.R. Tolkien", 20000);
 
-// prototypal inheritance
+// // prototypal inheritance
 
-function Person(name) {
-  this.name = name;
-}
+// function Person(name) {
+//   this.name = name;
+// }
 
-Person.prototype.sayName = function () {
-  console.log(`Hello, I'm ${this.name}!`);
+// Person.prototype.sayName = function () {
+//   console.log(`Hello, I'm ${this.name}!`);
+// };
+
+// function Player(name, marker) {
+//   this.name = name;
+//   this.marker = marker;
+// }
+
+// Player.prototype.getMarker = function () {
+//   console.log(`My marker is ${this.marker}`);
+// };
+
+// // Object.getPrototypeOf(Player.prototype) should
+// // return the value of "Person.prototype" instead
+// // of "Object.prototype"
+
+// Object.getPrototypeOf(Player.prototype);
+
+// // Now make `Player` objects inherit from `Person`
+// Object.setPrototypeOf(Player.prototype, Person.prototype);
+// Object.getPrototypeOf(Player.prototype); // returns Person.prototype
+
+// const player1 = new Player("steve", "X");
+// const player2 = new Player("steve-o", "O");
+
+// player1.sayName();
+// player2.sayName();
+
+// player1.getMarker();
+// player2.getMarker();
+
+let head = {
+  glasses: 1,
 };
 
-function Player(name, marker) {
-  this.name = name;
-  this.marker = marker;
-}
-
-Player.prototype.sayHello = function () {
-  return "Hello, I'm a player!";
+let table = {
+  pen: 3,
+  __proto__: head,
 };
 
-Player.prototype.getMarker = function () {
-  console.log(`My marker is ${this.marker}`);
+let bed = {
+  sheet: 1,
+  pillow: 2,
 };
 
-// Object.getPrototypeOf(Player.prototype) should
-// return the value of "Person.prototype" instead
-// of "Object.prototype"
-
-Object.getPrototypeOf(Player.prototype);
-
-// Now make `Player` objects inherit from `Person`
-Object.setPrototypeOf(Player.prototype, Person.prototype);
-Object.getPrototypeOf(Player.prototype); // returns Person.prototype
-
-const player1 = new Player("steve", "X");
-const player2 = new Player("steve-o", "O");
-
-player1.sayName();
-player2.sayName();
-
-player1.getMarker();
-player2.getMarker();
+let pockets = {
+  money: 2000,
+};
