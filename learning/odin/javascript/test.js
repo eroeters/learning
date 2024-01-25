@@ -115,15 +115,70 @@
 
 // Functions
 
-function random(number) {
-  return Math.floor(Math.random() * number + 1);
+// function random(number) {
+//   return Math.floor(Math.random() * number + 1);
+// }
+
+// const text = "I am not your father";
+
+// const textBox = document.querySelector("#textBox");
+// const output = document.querySelector("#output");
+
+// textBox.addEventListener("keydown", (event) => {
+//   output.textContent = `You pressed "${event.key}."`;
+// });
+
+// object constructors
+
+function Book(title, author, pageCount) {
+  this.title = title;
+  this.author = author;
+  this.pageCount = pageCount;
+  this.info = function () {
+    return `"${title}" by ${author}, ${pageCount} pages long`;
+  };
 }
 
-const text = "I am not your father";
+const hobbit = new Book("The Lord of the Rings", "J.R.R. Tolkien", 20000);
 
-const textBox = document.querySelector("#textBox");
-const output = document.querySelector("#output");
+// prototypal inheritance
 
-textBox.addEventListener("keydown", (event) => {
-  output.textContent = `You pressed "${event.key}."`;
-});
+function Person(name) {
+  this.name = name;
+}
+
+Person.prototype.sayName = function () {
+  console.log(`Hello, I'm ${this.name}!`);
+};
+
+function Player(name, marker) {
+  this.name = name;
+  this.marker = marker;
+}
+
+Player.prototype.sayHello = function () {
+  return "Hello, I'm a player!";
+};
+
+Player.prototype.getMarker = function () {
+  console.log(`My marker is ${this.marker}`);
+};
+
+// Object.getPrototypeOf(Player.prototype) should
+// return the value of "Person.prototype" instead
+// of "Object.prototype"
+
+Object.getPrototypeOf(Player.prototype);
+
+// Now make `Player` objects inherit from `Person`
+Object.setPrototypeOf(Player.prototype, Person.prototype);
+Object.getPrototypeOf(Player.prototype); // returns Person.prototype
+
+const player1 = new Player("steve", "X");
+const player2 = new Player("steve-o", "O");
+
+player1.sayName();
+player2.sayName();
+
+player1.getMarker();
+player2.getMarker();
