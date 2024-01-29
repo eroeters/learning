@@ -1,5 +1,5 @@
 let bookList = document.querySelector(".bookList");
-const li = document.createElement("li");
+const bookInput = document.querySelector(".bookInput");
 
 const myLibrary = [];
 
@@ -9,28 +9,42 @@ function Book(title, author, date) {
   this.date = date;
 }
 
-function addBookToLibrary() {}
+function addBook() {
+  let titleInput = document.querySelector("#title-input");
+  let authorInput = document.querySelector("#author-input");
+  let dateInput = document.querySelector("#date-input");
 
-function displayLibrary() {
-  for (let i = 0; i < myLibrary.length; i++) {
-    // bookList.textContent = `${myLibrary[i].title} by ${myLibrary[i].author} written in ${myLibrary[i].date}`;
-    // let node = document.createTextNode(
-    //   `${myLibrary[i].title} by ${myLibrary[i].author} written in ${myLibrary[i].date}`
-    // );
-    // bookList.appendChild(node);
-    let li = document.createElement("li");
-    li.textContent = `${myLibrary[i].title} by ${myLibrary[i].author} written in ${myLibrary[i].date}`;
-    bookList.appendChild(li);
-  }
+  title = titleInput.value;
+  author = authorInput.value;
+  date = dateInput.value;
+
+  const book = new Book(title, author, date);
+  myLibrary.push(book);
+  displayBooks(book);
+  console.log(myLibrary);
 }
 
-const test = new Book("Test Book", "Test Author", 1949);
-const test1 = new Book("Test Book 2", "Test Author 2", 1950);
-const test2 = new Book("Test Book 3", "Test Author 3", 1951);
-const test3 = new Book("Test Book 4", "Test Author 4", 1952);
-myLibrary.push(test);
-myLibrary.push(test1);
-myLibrary.push(test2);
-myLibrary.push(test3);
-// console.dir(myLibrary);
-// bookList.textContent = `${myLibrary[0].title} by ${myLibrary[0].author} written in ${myLibrary[0].date}`;
+function displayBooks(book) {
+  let li = document.createElement("li");
+  li.classList.add("bookLi");
+  li.textContent = `${book.title} by ${book.author} written in ${book.date}`;
+  bookList.appendChild(li);
+}
+
+// function displayLibrary() {
+//   for (let i = 0; i < myLibrary.length; i++) {
+//     let li = document.createElement("li");
+//     li.classList.add("bookLi");
+//     li.textContent = `${myLibrary[i].title} by ${myLibrary[i].author} written in ${myLibrary[i].date}`;
+//     bookList.appendChild(li);
+//   }
+// }
+
+// const test = new Book("Test Book", "Test Author", 1949);
+// const test1 = new Book("Test Book 2", "Test Author 2", 1950);
+// const test2 = new Book("Test Book 3", "Test Author 3", 1951);
+// const test3 = new Book("Test Book 4", "Test Author 4", 1952);
+// myLibrary.push(test);
+// myLibrary.push(test1);
+// myLibrary.push(test2);
+// myLibrary.push(test3);

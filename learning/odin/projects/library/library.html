@@ -9,8 +9,16 @@
   </head>
   <body>
     <h1>My Library</h1>
+    <!-- <form action="" class="addBook"> -->
+    <label for="title-input">Title:</label>
+    <input type="text" id="title-input" />
+    <label for="author-input">Author:</label>
+    <input type="text" id="author-input" />
+    <label for="date-input">Date:</label>
+    <input type="number" id="date-input" />
+    <!-- </form> -->
+    <button class="bookInput" onclick="addBook()">Add Book</button>
 
-    <button class="addBook" onclick="displayLibrary()">Add Book</button>
     <ul class="bookList"></ul>
   </body>
 </html>
