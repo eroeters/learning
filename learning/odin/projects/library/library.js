@@ -1,4 +1,5 @@
 let bookList = document.querySelector(".bookList");
+const li = document.createElement("li");
 
 const myLibrary = [];
 
@@ -13,11 +14,13 @@ function addBookToLibrary() {}
 function displayLibrary() {
   for (let i = 0; i < myLibrary.length; i++) {
     // bookList.textContent = `${myLibrary[i].title} by ${myLibrary[i].author} written in ${myLibrary[i].date}`;
-    let newPara = document.createElement("p");
-    let node = document.createTextNode(
-      `${myLibrary[i].title} by ${myLibrary[i].author} written in ${myLibrary[i].date}`
-    );
-    bookList.appendChild(node);
+    // let node = document.createTextNode(
+    //   `${myLibrary[i].title} by ${myLibrary[i].author} written in ${myLibrary[i].date}`
+    // );
+    // bookList.appendChild(node);
+    let li = document.createElement("li");
+    li.textContent = `${myLibrary[i].title} by ${myLibrary[i].author} written in ${myLibrary[i].date}`;
+    bookList.appendChild(li);
   }
 }
 
