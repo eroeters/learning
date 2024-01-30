@@ -17,6 +17,8 @@ li {
   margin-left: 10px;
   border: none;
   border-radius: 3px;
+  height: 20px;
+  width: 20px;
 }
 
 .removeBtn:hover {
@@ -27,12 +29,14 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   background-color: grey;
   color: white;
   width: 200px;
-  height: 300px;
+  height: auto;
   border-radius: 5px;
+  margin: 10px;
+  padding: 10px 0 10px 0;
 }
 
 .bookInfo {
