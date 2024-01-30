@@ -22,3 +22,15 @@ li {
 .removeBtn:hover {
   background-color: rgb(179, 60, 60);
 }
+
+.bookCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
+  color: white;
+  width: 200px;
+  height: 300px;
+  border-radius: 5px;
+}

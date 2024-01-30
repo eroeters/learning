@@ -1,6 +1,5 @@
 let bookList = document.querySelector(".bookList");
 const bookInput = document.querySelector(".bookInput");
-// const removeBtn = document.querySelector(".removeBtn");
 
 const myLibrary = [];
 
@@ -22,22 +21,30 @@ function addBook() {
   const book = new Book(title, author, date);
   myLibrary.push(book);
   displayBooks(book);
+  // createCard();
   console.log(myLibrary);
 }
 
 function displayBooks(book) {
+  let div = document.createElement("div");
   let li = document.createElement("li");
   let btn = document.createElement("button");
+  div.classList.add("bookCard");
   li.classList.add("bookLi");
   btn.classList.add("removeBtn");
   li.textContent = `"${book.title}" by ${book.author} written in ${book.date}`;
   btn.textContent = "X";
-  bookList.appendChild(li);
-  li.appendChild(btn);
-  btn.addEventListener("click", () => {
+  bookList.appendChild(div);
+  div.appendChild(li);
+  div.appendChild(btn);
+  div.addEventListener("click", () => {
     console.log("remove button clicked");
   });
 }
+
+// function createCard() {
+
+// }
 
 // function displayLibrary() {
 //   for (let i = 0; i < myLibrary.length; i++) {
