@@ -9,3 +9,12 @@ li {
 .bookLi {
   margin-top: 5px;
 }
+
+.removeBtn {
+  background-color: red;
+  font-weight: bold;
+  color: white;
+  margin-left: 10px;
+  border: none;
+  border-radius: 3px;
+}

@@ -26,10 +26,18 @@ function addBook() {
 
 function displayBooks(book) {
   let li = document.createElement("li");
+  let btn = document.createElement("button");
   li.classList.add("bookLi");
-  li.textContent = `${book.title} by ${book.author} written in ${book.date}`;
+  btn.classList.add("removeBtn");
+  li.textContent = `"${book.title}" by ${book.author} written in ${book.date}`;
+  btn.textContent = "X";
   bookList.appendChild(li);
+  li.appendChild(btn);
 }
+
+// function removeBtn {
+
+// }
 
 // function displayLibrary() {
 //   for (let i = 0; i < myLibrary.length; i++) {
