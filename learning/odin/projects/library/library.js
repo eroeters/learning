@@ -1,5 +1,6 @@
 let bookList = document.querySelector(".bookList");
 const bookInput = document.querySelector(".bookInput");
+// const removeBtn = document.querySelector(".removeBtn");
 
 const myLibrary = [];
 
@@ -33,11 +34,10 @@ function displayBooks(book) {
   btn.textContent = "X";
   bookList.appendChild(li);
   li.appendChild(btn);
+  btn.addEventListener("click", () => {
+    console.log("remove button clicked");
+  });
 }
-
-// function removeBtn {
-
-// }
 
 // function displayLibrary() {
 //   for (let i = 0; i < myLibrary.length; i++) {

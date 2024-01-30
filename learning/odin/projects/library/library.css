@@ -18,3 +18,7 @@ li {
   border: none;
   border-radius: 3px;
 }
+
+.removeBtn:hover {
+  background-color: rgb(179, 60, 60);
+}
