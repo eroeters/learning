@@ -21,45 +21,37 @@ function addBook() {
   const book = new Book(title, author, date);
   myLibrary.push(book);
   displayBooks(book);
-  // createCard();
   console.log(myLibrary);
 }
 
 function displayBooks(book) {
   let div = document.createElement("div");
-  let li = document.createElement("li");
+  let bookInfo = document.createElement("div");
+  let bookTitle = document.createElement("p");
+  let bookAuthor = document.createElement("p");
+  let bookDate = document.createElement("p");
   let btn = document.createElement("button");
+
   div.classList.add("bookCard");
-  li.classList.add("bookLi");
+  bookInfo.classList.add("bookInfo");
+  bookTitle.classList.add("bookTitle");
+  bookAuthor.classList.add("bookAuthor");
+  bookDate.classList.add("bookDate");
   btn.classList.add("removeBtn");
-  li.textContent = `"${book.title}" by ${book.author} written in ${book.date}`;
+
+  bookTitle.textContent = `Title: ${book.title}`;
+  bookAuthor.textContent = `Author: ${book.author}`;
+  bookDate.textContent = `Date: ${book.date}`;
   btn.textContent = "X";
+
   bookList.appendChild(div);
-  div.appendChild(li);
+  div.appendChild(bookInfo);
+  bookInfo.appendChild(bookTitle);
+  bookInfo.appendChild(bookAuthor);
+  bookInfo.appendChild(bookDate);
   div.appendChild(btn);
+
   div.addEventListener("click", () => {
     console.log("remove button clicked");
   });
 }
-
-// function createCard() {
-
-// }
-
-// function displayLibrary() {
-//   for (let i = 0; i < myLibrary.length; i++) {
-//     let li = document.createElement("li");
-//     li.classList.add("bookLi");
-//     li.textContent = `${myLibrary[i].title} by ${myLibrary[i].author} written in ${myLibrary[i].date}`;
-//     bookList.appendChild(li);
-//   }
-// }
-
-// const test = new Book("Test Book", "Test Author", 1949);
-// const test1 = new Book("Test Book 2", "Test Author 2", 1950);
-// const test2 = new Book("Test Book 3", "Test Author 3", 1951);
-// const test3 = new Book("Test Book 4", "Test Author 4", 1952);
-// myLibrary.push(test);
-// myLibrary.push(test1);
-// myLibrary.push(test2);
-// myLibrary.push(test3);
