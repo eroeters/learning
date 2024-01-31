@@ -19,10 +19,14 @@ bookInput.addEventListener("click", (event) => {
   author = authorInput.value;
   date = dateInput.value;
 
-  const book = new Book(title, author, date);
-  myLibrary.push(book);
-  displayBooks(book);
-  console.log(myLibrary);
+  if (title === "" || authorInput === "" || dateInput === "") {
+    alert("Please fill out the required fields");
+  } else {
+    const book = new Book(title, author, date);
+    myLibrary.push(book);
+    displayBooks(book);
+    console.log(myLibrary);
+  }
 });
 
 function displayBooks(book) {
