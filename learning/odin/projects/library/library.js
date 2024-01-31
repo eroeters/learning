@@ -48,8 +48,6 @@ function displayBooks(book) {
   bookList.appendChild(div);
   div.appendChild(bookInfo);
   bookInfo.append(bookTitle, bookAuthor, bookDate);
-  // bookInfo.appendChild(bookAuthor);
-  // bookInfo.appendChild(bookDate);
   div.appendChild(btn);
 
   div.addEventListener("click", () => {
