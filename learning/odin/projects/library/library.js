@@ -43,6 +43,7 @@ function displayBooks(book) {
   bookAuthor.classList.add("bookAuthor");
   bookDate.classList.add("bookDate");
   btn.classList.add("removeBtn");
+  btn.setAttribute("title", "Remove Book");
 
   bookTitle.textContent = `Title: ${book.title}`;
   bookAuthor.textContent = `Author: ${book.author}`;

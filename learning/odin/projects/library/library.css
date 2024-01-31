@@ -50,3 +50,8 @@ li {
 .bookInfo > p {
   margin: 5px;
 }
+
+.bookList {
+  display: grid;
+  grid-template: auto / repeat(5, 1fr);
+}
