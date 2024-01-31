@@ -54,7 +54,8 @@ function displayBooks(book) {
   bookInfo.append(bookTitle, bookAuthor, bookDate);
   div.appendChild(btn);
 
-  div.addEventListener("click", () => {
+  btn.addEventListener("click", () => {
+    // bookCard.remove();
     console.log("remove button clicked");
   });
 }
