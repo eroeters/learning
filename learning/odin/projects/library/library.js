@@ -25,21 +25,6 @@ bookInput.addEventListener("click", (event) => {
   console.log(myLibrary);
 });
 
-// function addBook() {
-//   let titleInput = document.querySelector("#title-input");
-//   let authorInput = document.querySelector("#author-input");
-//   let dateInput = document.querySelector("#date-input");
-
-//   title = titleInput.value;
-//   author = authorInput.value;
-//   date = dateInput.value;
-
-//   const book = new Book(title, author, date);
-//   myLibrary.push(book);
-//   displayBooks(book);
-//   console.log(myLibrary);
-// }
-
 function displayBooks(book) {
   let div = document.createElement("div");
   let bookInfo = document.createElement("div");
@@ -62,9 +47,9 @@ function displayBooks(book) {
 
   bookList.appendChild(div);
   div.appendChild(bookInfo);
-  bookInfo.appendChild(bookTitle);
-  bookInfo.appendChild(bookAuthor);
-  bookInfo.appendChild(bookDate);
+  bookInfo.append(bookTitle, bookAuthor, bookDate);
+  // bookInfo.appendChild(bookAuthor);
+  // bookInfo.appendChild(bookDate);
   div.appendChild(btn);
 
   div.addEventListener("click", () => {
