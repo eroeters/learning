@@ -19,7 +19,7 @@ bookInput.addEventListener("click", (event) => {
   author = authorInput.value;
   date = dateInput.value;
 
-  if (title === "" || authorInput === "" || dateInput === "") {
+  if (title === "" || author === "" || date === "") {
     alert("Please fill out the required fields");
   } else {
     const book = new Book(title, author, date);
