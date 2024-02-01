@@ -48,7 +48,7 @@ function displayBooks(book) {
   bookTitle.textContent = `Title: ${book.title}`;
   bookAuthor.textContent = `Author: ${book.author}`;
   bookDate.textContent = `Date: ${book.date}`;
-  btn.textContent = "X";
+  btn.textContent = "Remove";
 
   bookList.appendChild(div);
   div.appendChild(bookInfo);
