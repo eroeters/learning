@@ -24,15 +24,19 @@ bookInput.addEventListener("click", (event) => {
   } else {
     for (i = 0; i < myLibrary.length; i++);
     {
+      // create book based on input values from form
       const book = new Book(title, author, date);
 
+      // create elements for card
       let div = document.createElement("div");
+      div.setAttribute("data-index", i);
       let bookInfo = document.createElement("div");
       let bookTitle = document.createElement("p");
       let bookAuthor = document.createElement("p");
       let bookDate = document.createElement("p");
       let btn = document.createElement("button");
 
+      // add classes to created elements
       div.classList.add("bookCard");
       bookInfo.classList.add("bookInfo");
       bookTitle.classList.add("bookTitle");
@@ -41,58 +45,34 @@ bookInput.addEventListener("click", (event) => {
       btn.classList.add("removeBtn");
       btn.setAttribute("title", "Remove Book");
 
+      // update created elements with text
       bookTitle.textContent = `Title: ${book.title}`;
       bookAuthor.textContent = `Author: ${book.author}`;
       bookDate.textContent = `Date: ${book.date}`;
       btn.textContent = "Remove";
 
+      // push changes to DOM and library array
       bookList.appendChild(div);
       div.appendChild(bookInfo);
       bookInfo.append(bookTitle, bookAuthor, bookDate);
       div.appendChild(btn);
 
+      myLibrary.push(book);
+      console.log(myLibrary);
+
+      // add event listener for remove button
       btn.addEventListener("click", () => {
-        myLibrary.splice(i, 1);
+        myLibrary.splice(btn.parentNode.getAttribute("data-index"), 1);
+        btn.parentNode.remove();
+        removeChilds();
         console.log("remove button clicked");
       });
-
-      myLibrary.push(book);
-      // displayBooks(book);
-      console.log(myLibrary);
-      console.log(i);
-      i++;
     }
   }
 });
 
-// function displayBooks(book) {
-// let div = document.createElement("div");
-// let bookInfo = document.createElement("div");
-// let bookTitle = document.createElement("p");
-// let bookAuthor = document.createElement("p");
-// let bookDate = document.createElement("p");
-// let btn = document.createElement("button");
-
-// div.classList.add("bookCard");
-// bookInfo.classList.add("bookInfo");
-// bookTitle.classList.add("bookTitle");
-// bookAuthor.classList.add("bookAuthor");
-// bookDate.classList.add("bookDate");
-// btn.classList.add("removeBtn");
-// btn.setAttribute("title", "Remove Book");
-
-// bookTitle.textContent = `Title: ${book.title}`;
-// bookAuthor.textContent = `Author: ${book.author}`;
-// bookDate.textContent = `Date: ${book.date}`;
-// btn.textContent = "Remove";
-
-// bookList.appendChild(div);
-// div.appendChild(bookInfo);
-// bookInfo.append(bookTitle, bookAuthor, bookDate);
-// div.appendChild(btn);
-
-// btn.addEventListener("click", () => {
-//   myLibrary.splice(i, 1);
-//   console.log("remove button clicked");
-// });
-// }
+function removeChilds() {
+  for (i = 0; i < myLibrary.length; i++) {
+    myLibrary.removeChild(myLibrary.firstElementChild);
+  }
+}
