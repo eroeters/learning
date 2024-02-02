@@ -9,8 +9,7 @@ function Book(title, author, date) {
   this.date = date;
 }
 
-bookInput.addEventListener("click", (event) => {
-  event.preventDefault();
+function addBooksToLibrary() {
   let titleInput = document.querySelector("#title-input");
   let authorInput = document.querySelector("#author-input");
   let dateInput = document.querySelector("#date-input");
@@ -64,15 +63,20 @@ bookInput.addEventListener("click", (event) => {
       btn.addEventListener("click", () => {
         myLibrary.splice(btn.parentNode.getAttribute("data-index"), 1);
         btn.parentNode.remove();
-        removeChilds();
+        // removeChilds();
         console.log("remove button clicked");
       });
     }
   }
-});
-
-function removeChilds() {
-  for (i = 0; i < myLibrary.length; i++) {
-    myLibrary.removeChild(myLibrary.firstElementChild);
-  }
 }
+
+// function removeChilds() {
+//   for (i = 0; i < myLibrary.length; i++) {
+//     myLibrary.removeChild(myLibrary.firstElementChild);
+//   }
+// }
+
+bookInput.addEventListener("click", (event) => {
+  event.preventDefault();
+  addBooksToLibrary();
+});
