@@ -63,18 +63,11 @@ function addBooksToLibrary() {
       btn.addEventListener("click", () => {
         myLibrary.splice(btn.parentNode.getAttribute("data-index"), 1);
         btn.parentNode.remove();
-        // removeChilds();
         console.log("remove button clicked");
       });
     }
   }
 }
-
-// function removeChilds() {
-//   for (i = 0; i < myLibrary.length; i++) {
-//     myLibrary.removeChild(myLibrary.firstElementChild);
-//   }
-// }
 
 bookInput.addEventListener("click", (event) => {
   event.preventDefault();
