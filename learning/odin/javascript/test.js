@@ -113,7 +113,7 @@
 //   select.value === "black" ? update("black", "white") : update("white", "black")
 // );
 
-// Functions
+// // // // // // // // // // Functions // // // // // ///
 
 // function random(number) {
 //   return Math.floor(Math.random() * number + 1);
@@ -141,7 +141,7 @@
 
 // const hobbit = new Book("The Lord of the Rings", "J.R.R. Tolkien", 20000);
 
-// // prototypal inheritance
+// // // // // // // // // prototypal inheritance // // // // // // // //
 
 // function Person(name) {
 //   this.name = name;
@@ -178,3 +178,18 @@
 
 // player1.getMarker();
 // player2.getMarker();
+
+// // // // // // // // factory functions // // // // // // //
+
+let users = [];
+
+function createUser(name) {
+  const discordName = "@" + name;
+
+  let rep = 0;
+  const getRep = () => rep;
+  const giveRep = () => rep++;
+  users.push(name);
+  console.log(users);
+  return { name, discordName, getRep, giveRep };
+}
