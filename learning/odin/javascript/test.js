@@ -181,15 +181,64 @@
 
 // // // // // // // // factory functions // // // // // // //
 
-let users = [];
+// let users = [];
 
-function createUser(name) {
-  const discordName = "@" + name;
+// function createUser(name) {
+//   const discordName = "@" + name;
 
-  let rep = 0;
-  const getRep = () => rep;
-  const giveRep = () => rep++;
-  users.push(name);
-  console.log(users);
-  return { name, discordName, getRep, giveRep };
-}
+//   let rep = 0;
+//   const getRep = () => rep;
+//   const giveRep = () => rep++;
+//   // users.push(name);
+//   // console.log(users);
+//   return { name, discordName, getRep, giveRep };
+// }
+
+// const josh = createUser("Josh");
+// josh.giveRep();
+// josh.giveRep();
+
+// console.log({
+//   discordName: josh.discordName,
+//   rep: josh.getRep(),
+// });
+
+// // // // // // // // // Prototypal factory functions ///////////////////////////
+
+// function createPlayer(name, level) {
+//   const { getRep, giveRep } = createUser(name);
+
+//   const increaseLevel = () => level++;
+//   return { name, getRep, giveRep, increaseLevel };
+// }
+
+// const calculator = (function () {
+//   const add = (a, b) => a + b;
+//   const sub = (a, b) => a - b;
+//   const mul = (a, b) => a * b;
+//   const div = (a, b) => a / b;2
+//   return { add, sub, mul, div };
+// })();
+
+///////////////////////// Modules ////////////////////////
+
+// let myModule = {
+//   name: "Will",
+//   age: 34,
+//   sayName: function () {
+//     alert(this.name);
+//   },
+//   setName: function (newName) {
+//     this.name = newName;
+//   },
+// };
+
+// myModule.setName("Willis");
+// myModule.sayName();
+
+let people = {
+  people: [],
+  template: document.querySelector("#people-template").innerHTML,
+};
+
+function miscFunction() {}

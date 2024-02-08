@@ -32,11 +32,29 @@
     <h1>This is my website</h1> -->
 
     <!-- calendar based on  https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals-->
-
+    <!-- 
     <h1>test git upload</h1>
 
     <input type="text" id="textBox" />
-    <div id="output"></div>
+    <div id="output"></div> -->
+
+    <div class="heroUnit"></div>
+    <div class="peopleModule">
+      <h1>People</h1>
+      <input placeholder="name" type="text" />
+      <button id="addPerson">Add Person</button>
+      <ul id="people">
+        <script id="people-template" type="text/template">
+          {{#people}}
+            <li>
+              <span>{{.}}</span>
+              <i class='del'>X</i>
+            </li>
+            {{/people}}
+        </script>
+      </ul>
+    </div>
+
     <script src="test.js"></script>
   </body>
 </html>
