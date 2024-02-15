@@ -1,0 +1,21 @@
+.board {
+  display: grid;
+  height: 500px;
+  width: 500px;
+  grid-template: repeat(6, 1fr) / repeat(7, 1fr);
+  border: 1px solid black;
+  gap: 2px;
+  padding: 2px;
+  background-color: grey;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  border: 1px solid grey;
+  background: lightyellow;
+  cursor: pointer;
+}
