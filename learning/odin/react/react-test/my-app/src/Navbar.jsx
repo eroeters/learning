@@ -1,6 +1,12 @@
-function Navbar() {
+export default function Navbar() {
   return (
-    <nav>
+    <nav
+      // inline styling using double curly braces
+      style={{
+        backgroundColor: "black",
+        color: "pink",
+      }}
+    >
       <ul>
         <li>Test 1</li>
         <li>Test 2</li>
@@ -9,5 +15,3 @@ function Navbar() {
     </nav>
   );
 }
-
-export default Navbar;

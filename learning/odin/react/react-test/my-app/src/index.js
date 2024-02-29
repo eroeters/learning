@@ -5,12 +5,18 @@ import reportWebVitals from "./reportWebVitals";
 import Greeting from "./Greeting";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import TestJS from "./TestJS";
+import Avatar from "./Avatar";
+import ToDoList from "./ToDoList";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Navbar />
+    <Avatar />
     <Greeting />
+    <TestJS />
+    <ToDoList />
     <Footer />
   </React.StrictMode>
 );
