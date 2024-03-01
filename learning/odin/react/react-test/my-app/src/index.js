@@ -8,6 +8,8 @@ import Footer from "./Footer";
 import TestJS from "./TestJS";
 import Avatar from "./Avatar";
 import ToDoList from "./ToDoList";
+import App from "./App";
+import PackingList from "./PackingList";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -17,6 +19,8 @@ root.render(
     <Greeting />
     <TestJS />
     <ToDoList />
+    <App />
+    <PackingList />
     <Footer />
   </React.StrictMode>
 );
