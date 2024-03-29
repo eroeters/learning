@@ -112,3 +112,50 @@ body {
     opacity: 5%;
   }
 } */
+
+/*                  Dropdown Menu               */
+
+.dropdown-container {
+  max-width: 250px;
+  margin: 40px auto;
+  text-align: center;
+  line-height: 50px;
+  font-size: 15px;
+  color: rgb(247, 247, 247);
+  cursor: pointer;
+}
+
+.menu-title {
+  background-color: rgb(163, 162, 162);
+  animation-duration: 1s;
+  animation-name: dropdownToggle;
+}
+
+.dropdown-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(99, 97, 97);
+  display: none;
+}
+
+ul.dropdown-menu li:hover {
+  background: rgb(47, 46, 46);
+}
+
+.visible {
+  display: block;
+}
+
+@keyframes dropdownToggle {
+  0% {
+    height: 0px;
+  }
+
+  90% {
+    height: 100%;
+  }
+  100% {
+    height: 90%;
+  }
+}
